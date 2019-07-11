@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>login</title>
+  <link href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+  <div id="login">
+    <img src="./img/logo.png" alt="logo" class="logo">
+    <label for="tel" class="tel">
+      手机号
+      <input type="text" id="tel" class="_tel" placeholder="请输入手机号码" autofocus maxlength="11">
+      <i class="close">×</i>
+    </label>
+    <div class="tip"> <span>tip</span> </div>
+    <label for="valid" class="valid">
+      验证码
+      <input type="text" id="valid" placeholder="请输入4位验证码" maxlength="4">
+      <i class="close">×</i>
+      <span class="getvalid dont _getvalid">获取验证码</span>
+    </label>
+    <div class="loginbtn _login">
+      <!-- 请求时加类名 load -->
+      <a class="dont">Login</a>
+    </div>
+    <p class="ex">点击“登录”即表示您同意</p>
+    <a href="" class="agree">《使用条款和隐私政策》</a>
+  </div>
+  <!-- <script src="https://cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.js"></script> -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/public.js"></script>
+  <script src="./js/login.js"></script>
+</body>
+</html>

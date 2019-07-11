@@ -1,0 +1,213 @@
+#login {
+  // 公共样式
+  .logo,.tel,.valid,.loginbtn,.ex,.agree,.tip {
+    // display: none;
+    position: fixed;
+  }
+  .tel,.valid,.loginbtn,.ex,.agree,.tip {
+    left: 50px;
+    right: 50px;
+    opacity: 0;
+  }
+  $color:#0977d8;
+  // logo
+  .logo {
+    left: 50%;
+    top: 50%;
+    margin-top: -53px;
+    margin-left: -53px;
+    border-radius: 50%;
+    animation: logo 3s forwards;
+  }
+  // 输入框公共样式
+  .tel,.valid {
+    border-bottom: 1px solid $color;
+    padding-bottom: 8px;
+    font-size: 13px;
+    // 输入框
+    input {
+      margin-left: 5px;
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+    }
+    // 清除按钮
+    .close {
+      display: none;
+    }
+  }
+  // 手机号
+  .tel {
+    top: 210px;
+    animation: tel .5s 1.3s forwards;
+  }
+  // 验证码
+  .valid {
+    top: 270px;
+    animation: valid .5s 1.5s forwards;
+    // 获取验证码
+    .getvalid {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 85px;
+      text-align: center;
+      border: 1px solid $color;
+      padding: 5px 8px;
+      margin-top: -8px;
+      border-radius: 3px;
+      transition: all .5s;
+      white-space: nowrap;
+      overflow: hidden;
+      color: $color;
+      // 禁止点击
+      &.dont {
+        border-color: #999;
+        color: #999;
+        z-index: -2;
+      }
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -8px;
+      width: 85px;
+      height: 30px;
+      z-index: -1;
+    }
+  }
+  // 提示
+  .tip {
+    top: 245px;
+    z-index: 9;
+    text-align: center;
+    transition: all .5s;
+    span {
+      font-size: 12px;
+      color: #fff;
+      padding: 5px 20px;
+      background-color: $color;
+      border-radius: 50px;
+    }
+    &.tipShow {
+      top: 265px;
+      opacity: 1;
+    }
+  }
+  // 登录
+  .loginbtn {
+    top: 330px;
+    animation: loginbtn .5s 1.8s forwards;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    a {
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-color: $color;
+      color: #fff;
+      border-radius: 25px;
+      transition: all .5s;
+      overflow: hidden;
+      // load
+      &.load {
+        width: 40px;
+        color: $color;
+        border-radius: 0;
+        animation: load 1s .5s linear infinite;
+        z-index: -2;
+      }
+      // 禁止点击
+      &.dont {
+        border: 1px solid #999;
+        background-color: transparent;
+        color: #999;
+        z-index: -2;
+      }
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+  // 说明
+  .ex {
+    top: 390px;
+    animation: ex .5s 2.1s forwards;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+  }
+  // 同意
+  .agree {
+    top: 420px;
+    animation: agree .5s 2.4s forwards;
+    text-decoration: none;
+    color: #0977d8;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+// logo动画
+@keyframes logo {
+  20% {
+    top: 140px;
+  }
+  100% {
+    top: 140px;
+    border-radius: 0;
+  }
+}
+// 手机号动画
+@keyframes tel {
+  100% {
+    top: 230px; 
+    opacity: 1;
+  }
+}
+// 验证码动画
+@keyframes valid {
+  100% {
+    top: 290px; 
+    opacity: 1;
+  }
+}
+// 登录动画
+@keyframes loginbtn {
+  100% {
+    top: 350px; 
+    opacity: 1;
+  }
+}
+// 说明动画
+@keyframes ex {
+  100% {
+    top: 410px; 
+    opacity: 1;
+  }
+}
+// 同意动画
+@keyframes agree {
+  100% {
+    top: 440px; 
+    opacity: 1;
+  }
+}
+// 登录load动画
+@keyframes load {
+  100% {
+    transform: rotate(360deg);
+  }
+}
